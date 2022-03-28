@@ -1,0 +1,56 @@
+<!--miniprogram/pages/details/details.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+   <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>  -->
+  <text style="position: absolute; height: 75rpx; top: 228rpx; left: 263rpx; width: 225rpx; display: block; box-sizing: border-box">我的家庭成员</text>
+    <view class="weui-cells__title" style="position: absolute; left: 113rpx; top: 303rpx; color: #2d585a">（您的家庭成员将会显示在这里）</view>
+    
+</view>
+<button style="position: relative; left: 0rpx; top: 774rpx" size="mini" type="default" bindtap="Popup">点击这里添加家庭成员
+</button>
+<!--点击后灰色背景的设置-->
+<view wx:if="{{now_state}}" class="background" 	 bindtap="hideModal"
+></view>
+<!--弹窗的出现-->
+<view animation="{{animationData}}" class="box" wx:if="{{now_state}}">
+<!--弹窗内部内容-->
+<view class="container">
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset" bindsubmit="formSubmit">
+      <view class="page-section">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <input class="weui-input" name="name_input" placeholder="请输入姓名" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="page-section">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <input class="weui-input" name="number_input" placeholder="请输入手机号码" style="position: absolute;top: 150rpx;"/>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" size="mini" formType="submit" style="position: relative;top:200rpx"> 确认</button>
+        <button style="margin: 30rpx 0" size="mini" formType="reset" style="position: relative;top:200rpx">重置</button>
+      </view>
+    </form>
+  </view>
+
+</view>
+</view>
+
+

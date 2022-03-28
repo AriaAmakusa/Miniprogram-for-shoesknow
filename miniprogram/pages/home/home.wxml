@@ -1,0 +1,9 @@
+<!--miniprogram/pages/home.wxml-->
+<block wx:if="haimeixianghao">
+<view class="backgroud" style="position: absolute; width: 450rpx; left: 148rpx; top: 310rpx; height: 450rpx; display: block; box-sizing: border-box; border-radius: 25">
+  <icon class="icon-box-img" type="success" style="position: absolute; left: 54rpx; top: 3rpx" size="150"></icon>
+
+
+  <text style="position: relative; left: 99rpx; top: 394rpx; font: YouYuan; color: antiquewhite">当前无警报信息</text>
+</view>
+</block>

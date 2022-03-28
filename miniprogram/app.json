@@ -1,0 +1,41 @@
+{
+  "pages": [    
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/details/details"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "鞋知道",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#8ababc"
+  },
+  "tabBar": {
+    "color": "#0000000",
+    "selectedColor": "#8ababc",
+    "backgroundColor": "#fffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_police.png",
+        "selectedIconPath": "images/icon_police_HL.png",
+        "text": "报警记录"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/details/details",
+        "iconPath": "images/icon_me.png",
+        "selectedIconPath": "images/icon_me_HL.png",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
